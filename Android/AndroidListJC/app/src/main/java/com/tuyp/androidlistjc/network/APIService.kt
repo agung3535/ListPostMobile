@@ -7,10 +7,16 @@ import retrofit2.http.Path
 
 interface APIService {
 
+//    @GET("posts")
+//    suspend fun getAllPost(): Response<List<PostResponse>>
+//
+//    @GET("posts/{id}")
+//    suspend fun getDetailPost(@Path("id") postId: Int): Response<PostResponse>
+
     @GET("posts")
-    suspend fun getAllPost(): Response<List<PostResponse>>
+    suspend fun getAllPost(): List<PostResponse>
 
     @GET("posts/{id}")
-    suspend fun getDetailPost(@Path("id") postId: Int): Response<PostResponse>
+    suspend fun getDetailPost(@Path("id") postId: Int): PostResponse
 
 }

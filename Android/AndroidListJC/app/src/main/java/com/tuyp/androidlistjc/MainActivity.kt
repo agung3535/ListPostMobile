@@ -21,7 +21,9 @@ import com.tuyp.androidlistjc.presentation.detail.DetailPage
 import com.tuyp.androidlistjc.presentation.home.HomePage
 import com.tuyp.androidlistjc.presentation.ui.theme.AndroidListJCTheme
 import com.tuyp.androidlistjc.utils.ConstVal
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

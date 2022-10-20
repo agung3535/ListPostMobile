@@ -12,15 +12,11 @@ class FakeApiService : APIService {
 //        return dummyResponse
 //    }
 
-    override suspend fun getAllPost(): Response<List<PostResponse>> {
-        return Response.success(dummyResponse)
+    override suspend fun getAllPost(): List<PostResponse> {
+        return dummyResponse
     }
 
-    override suspend fun getDetailPost(postId: Int): Response<PostResponse> {
-        if (dummyDetailResponse.id == postId) {
-            return Response.success(dummyDetailResponse)
-        }else {
-            return Response.success(null)
-        }
+    override suspend fun getDetailPost(postId: Int): PostResponse {
+       return dummyDetailResponse
     }
 }

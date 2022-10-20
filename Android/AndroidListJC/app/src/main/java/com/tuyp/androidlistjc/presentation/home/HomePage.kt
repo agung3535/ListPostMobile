@@ -12,17 +12,19 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.tuyp.androidlistjc.entities.data.ResponseResource
 import com.tuyp.androidlistjc.presentation.home.screen.PostScreen
 import com.tuyp.androidlistjc.presentation.home.viewmodel.HomeViewModel
 import com.tuyp.androidlistjc.presentation.ui.component.LoadingCircular
 import com.tuyp.androidlistjc.presentation.ui.component.SearchComponent
+import dagger.hilt.android.lifecycle.HiltViewModel
 
 @Composable
 fun HomePage(
     modifier: Modifier = Modifier,
-    homeViewModel: HomeViewModel = viewModel(),
+    homeViewModel: HomeViewModel = hiltViewModel(),
     onClickData: (Int) -> Unit = {}
 ) {
     homeViewModel.getAllPost()

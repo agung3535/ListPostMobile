@@ -5,6 +5,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.tuyp.androidlistjc.entities.data.ResponseResource
 import com.tuyp.androidlistjc.presentation.detail.screen.DetailScreen
 import com.tuyp.androidlistjc.presentation.detail.viewmodel.DetailViewModel
@@ -14,7 +15,7 @@ import com.tuyp.androidlistjc.presentation.ui.component.LoadingCircular
 @Composable
 fun DetailPage(modifier: Modifier = Modifier,
                postId: Int = -1,
-detailViewModel: DetailViewModel = DetailViewModel()
+detailViewModel: DetailViewModel = hiltViewModel()
 ) {
 
     fun fetchData() {

@@ -4,9 +4,11 @@ import com.tuyp.androidlistjc.entities.data.reponse.PostResponse
 import com.tuyp.androidlistjc.network.APIService
 import com.tuyp.androidlistjc.network.RetrofitInstance
 import retrofit2.Response
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class DetailDataSource(val apiService: APIService = RetrofitInstance.api): IDetailDataSource {
-    override suspend fun getDetailPost(postId: Int): Response<PostResponse> = apiService.getDetailPost(postId)
+@Singleton
+class DetailDataSource @Inject constructor(val apiService: APIService) {
+    suspend fun getDetailPost(postId: Int): PostResponse = apiService.getDetailPost(postId)
 
-//    override suspend fun getDetailPostSecond(postId: Int): Response<PostResponse> = RetrofitInstance.api.getDetailPost(postId)
 }

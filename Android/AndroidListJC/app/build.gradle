@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -69,6 +71,10 @@ dependencies {
     testImplementation 'org.mockito:mockito-core:4.4.0'
     testImplementation 'org.mockito:mockito-inline:4.4.0'
 
+    //hilt
+    implementation "com.google.dagger:hilt-android:$dagger_version"
+    kapt "com.google.dagger:hilt-android-compiler:$dagger_version"
+    implementation "androidx.hilt:hilt-navigation-compose:$hilt_version"
 
 
 

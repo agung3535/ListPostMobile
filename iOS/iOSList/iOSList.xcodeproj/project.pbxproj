@@ -41,6 +41,7 @@
 		49A4BA5529005DEF00A47A3D /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A4BA5429005DEF00A47A3D /* HomeRouter.swift */; };
 		49A4BA5D290072CC00A47A3D /* DICProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A4BA5C290072CC00A47A3D /* DICProtocol.swift */; };
 		49A4BA5F29007B5400A47A3D /* HomeInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A4BA5E29007B5400A47A3D /* HomeInjection.swift */; };
+		49C6F35129014D080051B36E /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C6F35029014D080051B36E /* LoaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		49A4BA5429005DEF00A47A3D /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		49A4BA5C290072CC00A47A3D /* DICProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DICProtocol.swift; sourceTree = "<group>"; };
 		49A4BA5E29007B5400A47A3D /* HomeInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInjection.swift; sourceTree = "<group>"; };
+		49C6F35029014D080051B36E /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -403,6 +405,7 @@
 			children = (
 				496E2DD328FFDC4300E60241 /* ListPostComponent.swift */,
 				496E2DD528FFE8E200E60241 /* SearchComponent.swift */,
+				49C6F35029014D080051B36E /* LoaderView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				496E2DB328FFA2D600E60241 /* PostResponse.swift in Sources */,
 				496E2DA028FFA13400E60241 /* PDetailDataSource.swift in Sources */,
 				496E2DB728FFA69300E60241 /* HomeRepository.swift in Sources */,
+				49C6F35129014D080051B36E /* LoaderView.swift in Sources */,
 				496E2DD628FFE8E200E60241 /* SearchComponent.swift in Sources */,
 				496E2D6728FFA04D00E60241 /* ContentView.swift in Sources */,
 				496E2DA228FFA13F00E60241 /* DetailDataSource.swift in Sources */,

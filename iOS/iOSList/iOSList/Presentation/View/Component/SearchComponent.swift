@@ -17,7 +17,7 @@ struct SearchComponent: View {
                     .foregroundColor(.white)
                 TextField("Search title", text: $searchText) { textEdit in
                     
-                    if textEdit {
+                    if textEdit || searchText != "" {
                         withAnimation {
                             isSearching = true
                         }
@@ -29,11 +29,30 @@ struct SearchComponent: View {
                     }
                 }
                 .foregroundColor(.white)
-                
+                if isSearching {
+                    Button(action: {
+                        searchText = ""
+                        isSearching = false
+                        UIApplication.shared.dismissKeyboard()
+                    }, label: {
+                        Image(systemName: "xmark.circle.fill")
+                            .resizable()
+                            .foregroundColor(.white)
+                            .frame(width: 30, height: 30, alignment: .center)
+                            .padding(5)
+                    })
+                }
+               
             }
         }
-        .frame(width: .infinity, height: 50)
+        .frame(height: 50)
         .background(Color.cyan)
+    }
+}
+
+extension UIApplication {
+    func dismissKeyboard() {
+      sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
 
